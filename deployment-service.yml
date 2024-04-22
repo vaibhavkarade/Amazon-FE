@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: Amazon
-        image: vaibhavkarade/Amazon:latest
+        image: vaibhavkarade/amazon:latest
         ports:
         - containerPort: 3000   # Use port 3000
 
