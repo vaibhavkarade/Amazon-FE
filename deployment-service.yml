@@ -3,19 +3,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Amazon
+  name: amazon
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Amazon
+      app: amazon
   template:
     metadata:
       labels:
-        app: Amazon
+        app: amazon
     spec:
       containers:
-      - name: Amazon
+      - name: amazon
         image: vaibhavkarade/amazon:latest
         ports:
         - containerPort: 3000   # Use port 3000
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Amazon-service
+  name: amazon-service
 spec:
   selector:
-    app: Amazon
+    app: amazon
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
